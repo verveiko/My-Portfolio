@@ -1,1 +1,1 @@
-Wordpress Theme for my Portfolio Site verveiko.comss
+Wordpress Theme for my Portfolio Site verveiko.com
