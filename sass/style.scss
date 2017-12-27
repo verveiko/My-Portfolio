@@ -1,0 +1,213 @@
+/*!
+Theme Name: portfolio
+Theme URI: http://underscores.me/
+Author: Eugene Verveiko
+Author URI: http://verveiko.com
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: portfolio
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+portfolio is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(220, 220, 220, 0.23);
+    img {
+    max-width: 100%;
+    height: auto;
+    }    
+}
+
+hr {
+    height: 1px;
+    width: 80%;
+    margin: 50px auto 50px;
+    background: #ebebeb;
+}
+
+header.site-header {
+    text-align: center;
+    img {
+        height: 200px;
+        margin-top: 10px;
+    }
+    .menu-primary-container ul {
+    display: inline-block;
+    li {
+        margin: 0;
+        float: left;
+        list-style: none;
+        font-size: 22px;
+        line-height: 125%;
+        }
+        li:after {
+        margin:0 30px;
+        display:inline-block;
+        content:'/';
+        color:#eee;
+        }
+        li:last-child:after {
+        display:none;
+        }
+        a {
+        text-decoration: none;
+        color: #56a5ce;
+        -webkit-transition:all linear 0.15s,false,false,false;
+        -moz-transition:all linear 0.15s,false,false,false;
+        -ms-transition:all linear 0.15s,false,false,false;
+        -o-transition:all linear 0.15s,false,false,false;
+        transition:all linear 0.15s,false,false,false;
+        }
+        .current-menu-item a {
+        text-decoration: none;
+        color: #ababab;
+        }
+        a:hover {
+        text-decoration: none;
+        color: #ababab;
+        }
+    }
+}
+
+article {
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.about-me { 
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    img {
+    max-width: 330px;
+    width: 33%;
+    float: left;
+    border-radius: 1000px;
+    }
+    h1 {
+    font-size: 56px;
+    width: 60.625%;
+    float: right;
+    text-align: left;
+    font-weight: 600;
+    }
+    h3 {
+    width: 60.625%;
+    float: right;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 34px;
+    color: #919191;
+    line-height: 130%;
+    font-weight: 300;
+    }
+}
+
+.about-me:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.skills, .work, .contact {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* padding: 50px; */
+    /* margin: 20px; */
+    padding: 50px 0;
+    h1 {
+        text-transform: uppercase;
+        border-bottom: 2px solid rgba(86, 165, 206, 0.35);
+        margin: 0 auto;
+    }
+}
+
+.skills {
+    background-color: darkgray;
+    i {
+        font-size: 60px;
+        color: #2d333a;
+        margin-left: 20px;
+    }
+    i:last-child {
+        margin-left: 0;
+    }
+    h1 {width: 222px;}
+    p {margin-bottom: 30px;}
+}
+
+.work {
+    h1 {width: 328px; margin-bottom: 20px;}
+    .projects {
+            column-count: 2;
+            column-gap: 1em;
+            max-width: 960px;
+            margin: 0 auto;
+        .piece {
+                background-color: #eee;
+                padding: 40px;
+                display: inline-block;
+                margin: 0 0 1em;
+            p {
+                text-align: left;
+                font-weight: 100;
+                padding-bottom: 10px;
+            }
+            img {
+                border: 1px solid gray;
+                max-width: 100%;
+                height: auto;
+            }
+            a {
+                background: gray;
+                color: white;
+                padding: 14px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            li { text-align: left;}
+        }
+    }
+}
+
+.contact {
+    background-color: rgba( 119, 119, 119, 0.478 );
+    h1 {width: 391px}
+    a, a:active, a:hover {color: white; text-decoration: none;}
+}
+
+@media screen and (max-width: 653px) {
+    .about-me {
+        img, h1, h3 {float:none;}
+        img {width: 100%;}
+        h1, h3 {width: 100%; text-align: center;}
+    }
+    .work {
+        .projects {
+            column-count: 1;
+        }
+    }
+}
+
+
